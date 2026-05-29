@@ -13,7 +13,7 @@ build:
   entry_points:
     - insightface-cli=insightface.commands.insightface_cli:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
