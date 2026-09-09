@@ -51,6 +51,7 @@ test:
     - insightface
   commands:
     - pip check
+    - insightface-cli --help
   requires:
     - pip
 
