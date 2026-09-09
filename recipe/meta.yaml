@@ -3,7 +3,7 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/insightface-{{ version }}.tar.gz
@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - insightface-cli=insightface.commands.insightface_cli:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
   skip: true  # [win]
 
@@ -49,6 +49,10 @@ requirements:
 test:
   imports:
     - insightface
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/deepinsight/insightface
