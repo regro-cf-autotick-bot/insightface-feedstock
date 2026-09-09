@@ -45,6 +45,7 @@ requirements:
     - cython
     - albumentations
     - prettytable
+    - simsimd
 
 test:
   imports:
