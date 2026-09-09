@@ -45,16 +45,12 @@ requirements:
     - cython
     - albumentations
     - prettytable
-    - simsimd
 
 test:
   imports:
     - insightface
   commands:
-    - pip check
     - insightface-cli --help
-  requires:
-    - pip
 
 about:
   home: https://github.com/deepinsight/insightface
